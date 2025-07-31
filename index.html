@@ -3,190 +3,145 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>K2B Audio Responsive</title>
+  <title>K2B Professional Audio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin:0; padding:0; }
-    body { font-family: sans-serif; color: #222; line-height: 1.6; }
-
-    /* NAVBAR */
-    .navbar {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      background: #dd1b1b;
-      color: #fff;
-      padding: 1rem;
-    }
-    .navbar .logo img { max-width: 120px; height:auto; }
-    .menu { width: 100%; }
-    .menu a {
-      display: block;
-      padding: 0.5rem 0;
-      color: #fff;
-      text-decoration: none;
-    }
-
-    /* HERO */
-    .hero {
-      text-align: center;
-      padding: 3rem 1rem;
-      background: #f4f4f4;
-    }
-
-    /* PRODUCTS */
-    .products-section {
-      padding: 2rem 1rem;
-      background: #f5f5f5;
-    }
-    .product-cards {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
-    .product-card {
-      background: #fff;
-      padding: 1.5rem;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-    }
-
-    /* GALLERY GRID */
-    .gallery {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      padding: 1rem;
-    }
-    figure img { width:100%; height:auto; display:block; }
-    figcaption { margin-top: 0.5rem; font-weight: bold; }
-    figcaption + p { margin-top:0.25rem; font-size: 0.9rem; color:#555; }
-
-    /* SLIDER */
-    .slider-container { position: relative; overflow: hidden; max-width: 100%; margin: 2rem auto; }
-    .slides { display: flex; transition: transform 0.5s ease; }
-    .slide { min-width: 100%; }
-    .slide img { width: 100%; display:block; }
-    .arrow {
-      position:absolute; top:50%; transform:translateY(-50%);
-      font-size:2rem; color:#fff; background:rgba(0,0,0,0.5);
-      border:none; padding:0.5rem 1rem; cursor:pointer;
-    }
-    .prev { left:10px; } .next { right:10px; }
-
-    /* CONTACT */
-    .contact-section { padding:2rem 1rem; background:#fff; }
-    .contact-details { display: flex; flex-direction: column; gap:1rem; }
-    .contact-map iframe { width:100%; height:200px; border:0; }
-
-    /* FOOTER */
-    .site-footer { background:#111; color:#fff; padding:2rem 1rem; text-align:center; }
-
-    /* MOBILE‑FIRST complete */
-
-    /* TABLET & UP */
-    @media (min-width: 768px) {
-      .navbar { flex-direction: row; justify-content: space-between; align-items:center; }
-      .menu { width: auto; }
-      .menu a { display: inline-block; margin-left: 1rem; padding: 0; }
-
-      .product-cards { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-      .gallery { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
-
-      .contact-details { flex-direction: row; }
-    }
-
-    /* DESKTOP & UP */
-    @media (min-width: 992px) {
-      .hero { padding: 4rem 1rem; }
-      .hero h1 { font-size: 2.5rem; }
-    }
+    body { font-family: system-ui, sans-serif; color: #222; }
+    .navbar-brand img { max-width: 140px; height: auto; }
+    .hero { padding: 4rem 1rem; background: #f8f9fa; text-align: center; }
+    .hero h1 { font-size: 2.5rem; }
+    .products-section { padding: 3rem 1rem; background: #fff; }
+    .contact-section { padding: 2.5rem 1rem; }
+    footer { background: #111; color: #fff; padding: 2rem 1rem; }
+    .carousel-inner img { width: 100%; height: 100%; object-fit: cover; }
   </style>
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo"><img src="./images/K2B Audio logo.jpg" alt="K2B Audio"></div>
-    <nav class="menu">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#products">Products</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <section id="hero" class="hero">
-    <h1>Welcome to K2B Professional Audio</h1>
-    <p>Proud to be made in India</p>
-  </section>
-
-  <section id="products" class="products-section">
-    <h2>Our Products</h2>
-    <div class="product-cards">
-      <div class="product-card">
-        <h3>Encore Series Speakers</h3>
-        <p>Portable live‑sound speakers…</p>
-      </div>
-      <div class="product-card">
-        <h3>KRM 12003+ Power Amplifier</h3>
-        <p>Dual 3400 W per channel…</p>
-      </div>
-      <div class="product-card">
-        <h3>Elite E218 Subwoofer</h3>
-        <p>Dual‑18″ horn‑loaded sub…</p>
-      </div>
-      <div class="product-card">
-        <h3>Edge EX12 Line‑Array Speaker</h3>
-        <p>One 12″ LF + 1.4″ HF Italian drivers…</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="gallery">
-    <figure><img src="./images/k2b.png" alt=""><figcaption>EDGE X</figcaption><p>LINE ARRAY LIVE SOUND SYSTEMS</p></figure>
-    <figure><img src="./images/omsai.png" alt=""><figcaption>ELAN PRO</figcaption><p>TOURING PRO SOUND SYSTEMS</p></figure>
-    <figure><img src="./images/k2b.png" alt=""><figcaption>ENCORE</figcaption><p>LIVE SOUND – PORTABLE / INSTALL SYSTEMS</p></figure>
-    <figure><img src="./images/k2b.png" alt=""><figcaption>EVOQUE</figcaption><p>CLUB / DISCOTHEQUE / LOUNGE SYSTEMS</p></figure>
-  </section>
-
-  <div>
-    <h2>Event Gallery</h2>
-    <div class="slider-container">
-      <div class="slides">
-        <div class="slide"><a href="#"><img src="./images/event.png" alt="Video 1"></a></div>
-        <div class="slide"><a href="#"><img src="./images/event1.png" alt="Video 2"></a></div>
-        <div class="slide"><a href="#"><img src="./images/ramnavmi.png" alt="Video 3"></a></div>
-      </div>
-      <button class="arrow prev" onclick="moveSlide(-1)">←</button>
-      <button class="arrow next" onclick="moveSlide(1)">→</button>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md navbar-dark bg-danger">
+  <div class="container">
+    <a class="navbar-brand" href="#"><img src="./images/K2B Audio logo.jpg" alt="K2B Audio"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navMenu" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
     </div>
   </div>
+</nav>
 
-  <script>
-    let index = 0;
-    const slides = document.querySelector('.slides'), total = slides.children.length;
-    function showSlide(i) {
-      index = (i + total) % total;
-      slides.style.transform = `translateX(${-index * 100}%)`;
-    }
-    function moveSlide(dir) { showSlide(index + dir); }
-  </script>
+<!-- Hero Section -->
+<section id="hero" class="hero">
+  <h1>Welcome to K2B Professional Audio</h1>
+  <p>Proud to be made in India</p>
+</section>
 
-  <section id="contact" class="contact-section">
-    <h2>Contact Us</h2>
-    <div class="contact-details">
-      <div class="contact-info">
-        <p><strong>Address:</strong> Pimpri‑Chinchwad, Pune, Maharashtra</p>
-        <p><strong>Phone:</strong> +91 98228 09079</p>
-        <p><strong>Email:</strong> k2bproaudio@gmail.com</p>
-      </div>
-      <div class="contact-map">
-        <iframe src="https://maps.google.com/maps?q=18.6182911,73.7950006&z=15&output=embed"
-          allowfullscreen loading="lazy"></iframe>
+<!-- Products Section -->
+<section id="products" class="products-section">
+  <h2>Our Products</h2>
+  <div class="row g-4">
+    <div class="col-md-3">
+      <div class="card">
+        <img src="./images/product1.jpg" class="card-img-top" alt="Encore Series Speakers">
+        <div class="card-body">
+          <h5 class="card-title">Encore Series Speakers</h5>
+          <p class="card-text">Portable live-sound speakers: 300–2000 W, Italian B&C drivers, ideal for live events.</p>
+        </div>
       </div>
     </div>
-  </section>
+    <div class="col-md-3">
+      <div class="card">
+        <img src="./images/product2.jpg" class="card-img-top" alt="KRM 12003+ Amplifier">
+        <div class="card-body">
+          <h5 class="card-title">KRM 12003+ Amplifier</h5>
+          <p class="card-text">3400 W per channel at 4 Ω, ultra-low distortion, ideal for PA setups.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Add more products as needed -->
+  </div>
+</section>
 
-  <footer class="site-footer">
-    <p>© 2025 K2B Professional Audio</p>
-  </footer>
+<!-- Event Gallery Section with Slideshow -->
+<section id="event-gallery" class="bg-light py-5">
+  <h2 class="text-center mb-4">Event Gallery</h2>
+  <div id="eventGalleryCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <a href="https://www.youtube.com/live/JsM18fuwbns?feature=shared" target="_blank">
+          <img src="./images/event.png" class="d-block w-100" alt="Event 1">
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="https://www.instagram.com/p/DIiZ-KQtZ0u/" target="_blank">
+          <img src="./images/event1.png" class="d-block w-100" alt="Event 2">
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="https://www.instagram.com/p/DILxi17NwWl/" target="_blank">
+          <img src="./images/ramnavmi.png" class="d-block w-100" alt="Event 3">
+        </a>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#eventGalleryCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#eventGalleryCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-5">
+  <div class="container">
+    <h2>About K2B Professional Audio</h2>
+    <p>
+      K2B Audio is one of the largest end-to-end event solution providers in Pimpri-Chinchwad, specializing in professional audio services, lighting setups, LED screen support, and comprehensive event management.
+    </p>
+    <ul>
+      <li>🎤 Audio Services: High-fidelity PA systems, wireless mics, live sound mixing.</li> 
+      <li>🎧 Lighting: Intelligent moving heads, floodlights, stage décor lighting.</li>
+      <li>💡 LED Screen Services: Full outdoor/indoor LED walls, video playback, technician operation.</li>
+      <li>📋 Event Management: Concept-to-execution support—planning, logistics, on-site coordination.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section bg-dark text-white">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <p><strong>📍 Address:</strong> Pimpri-Chinchwad, Pune, Maharashtra</p>
+        <p><strong>📞 Phone:</strong> <a href="tel:+919822809079" class="text-white">+919822809079</a></p>
+        <p><strong>✉️ Email:</strong> <a href="mailto:k2bproaudio@gmail.com" class="text-white">k2bproaudio@gmail.com</a></p>
+      </div>
+      <div class="col-md-6">
+        <iframe src="https://maps.google.com/maps?q=18.6182911,73.7950006&z=15&output=embed" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+  <div class="container text-center">
+    <p>&copy; 2025 K2B Professional Audio. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS (Optional for Carousel functionality) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
